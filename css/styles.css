@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --SpaceMono: 'Space Mono', sans-serif;
+    --Inconsolata: 'Inconsolata', sans-serif;
+    --Black: #333333;
+    --Gray: #4F4F4F;
+    --White: #fff;
+}
+
+body{
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+@keyframes upAndDown{
+    0%{
+        transform: translateY(20px);
+        transition: transform 1s ease;
+    }
+
+    100%{
+        transform: translateY(0%);
+        transition: transform 1s ease;
+    }
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    padding-left: 95px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo{
+    color: var(--Black);
+    font-family: var(--Inconsolata);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.main{
+    width: 95%;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+.content{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.content__scarecrow{
+    display: block;
+    width: 539.22px;
+    animation: upAndDown 2s forwards;
+    animation-iteration-count: infinite
+}
+
+.content__texts{
+    width: 586px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content__texts-title{
+    font-size: 64px;
+    font-family: var(--SpaceMono);
+    font-weight: 700;
+    line-height: 94.78px;
+    letter-spacing: -3.5%;
+}
+
+.content__paragraph{
+    width: 381px;
+    height: 108px;
+    font-size: 24px;
+    font-family: var(--SpaceMono);
+    margin-top: 36px;
+}
+
+.btn{
+    width: 216px;
+    height: 68px;
+    border: none;
+    outline: none;
+    background-color: var(--Gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    font-family: var(--SpaceMono);
+    line-height: 20.73px;
+    margin-top: 64px;
+}
+
+
+@media(max-width: 475px){
+    .navbar{
+        padding-left: 20px;
+    }
+
+    .main{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content__scarecrow{
+        width: 286.83px;
+        height: 238px;
+    }
+
+    .content__texts{
+        width: 95%;
+        height: 400px;
+        margin-top: 30px;
+    }
+
+    .content__texts-title{
+        font-size: 48px;
+        line-height: 71.09px;
+    }
+
+    .content__paragraph{
+        width: 328px;
+        font-size: 18px;
+        line-height: 26.66px;
+        margin-top: 30px;
+    }
+
+    .btn{
+        margin-top: 30px;
+    }
+}
